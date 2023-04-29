@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+     "width=device-width,initial-scale=1.0">
+  
+    <!-- CSS only -->
+    <link href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+        integrity=
+"sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+        crossorigin="anonymous" rel="stylesheet">
+  
+    <!-- Html2Pdf  -->
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" 
+        integrity=
+"sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A==" 
+        crossorigin="anonymous">
+    </script>
+  
+    <style>
+        .heading{
+          text-align: center;
+          color: #2F8D46;
+        }
+    </style>
+</head>
+  
+<body>
+    <h2 class="heading">
+      Koundinya constructions
+    </h2>
+  
+    <!-- Form encrypted as text -->
+    <form id ="form-print" enctype="text/plain" 
+          class="form-control">
+  
+        <label for="name">
+          <strong>Entry done by : </strong>
+        </label><br> 
+        <select class="form-control" 
+            id="subject" name="subject">
+            <option value="Default">
+                -
+            </option>
+            <option value="Web">
+                Gopala krishna
+            </option>
+            <option value="App">
+                Durgarao
+            </option>
+            <option value="Others">
+                Ramesh
+            </option>
+            <option value="Others">
+                Manoj
+            </option>
+        </select>
+        <br>
+        <label for="age">
+          <strong>Entry date: </strong>
+        </label>&nbsp;
+        <input class="datetime-local" type="datetime-local" 
+          id="age" name="Age" placeholder="Select date and time">
+          <br>
+          <br>
+
+          <label for="age">
+            <strong>Material requried date: </strong>
+          </label>&nbsp;
+          <input class="datetime-local" type="datetime-local" 
+            id="age" name="Age" placeholder="Select date and time">
+        <br>
+        <br>
+        <label for="subject">
+          <strong>Select Site: </strong>
+        </label>
+        <select class="form-control" 
+            id="subject" name="subject">
+            <option value="Default">
+                -
+            </option>
+            <option value="Web">
+                Uppal
+            </option>
+            <option value="App">
+                Silicon meadows
+            </option>
+            <option value="Others">
+                Musarambagh
+            </option>
+            <option value="Others">
+                Keesara
+            </option>
+        </select>
+        <br>
+          
+        <label for="message">
+          <strong>Work happened today  </strong>
+        </label>
+        <textarea class= "form-control"
+          id="message" name="message" 
+          placeholder="Enter you message" 
+          style="height:100px">
+        </textarea>
+        <br>
+        <label for="message">
+            <strong>Tommorow work plan  </strong>
+          </label>
+          <br><br>
+          <label for="message">
+            <strong>Work allocted to :</strong>
+          </label><br>
+          <select class="form-control" 
+            id="subject" name="subject">
+            <option value="Default">
+                -
+            </option>
+            <option value="Web">
+                Durgarao
+            </option>
+            <option value="App">
+                Ramesh
+            </option>
+        </select><br>
+          <textarea class= "form-control"
+            id="message" name="message" 
+            placeholder="Enter you message" 
+            style="height:100px">
+          </textarea>
+          <br>
+          <label for="message">
+            <strong>Work allocted to :</strong>
+          </label><br>
+          <select class="form-control" 
+            id="subject" name="subject">
+            <option value="Default">
+                -
+            </option>
+            <option value="Web">
+                Durgarao
+            </option>
+            <option value="App">
+                Ramesh
+            </option>
+          </select>
+            <br>
+          <textarea class= "form-control"
+            id="message" name="message" 
+            placeholder="Enter you message" 
+            style="height:100px">
+          </textarea>
+          <br>
+          <label for="message">
+            <strong>Materials requried:</strong>
+          </label>
+          <br>
+          <br>
+          <textarea class= "form-control"
+          id="message" name="message" 
+          placeholder="Enter you message" 
+          style="height:500px">
+        </textarea>
+        </select><br>
+        <label for="message">
+           
+        <input type="button" class="btn btn-primary" 
+          onclick="GeneratePdf();" value="GeneratePdf">
+    </form>
+                   
+    <script>          
+        // Function to GeneratePdf
+        function GeneratePdf() {
+            var element = document.getElementById('form-print');
+            html2pdf(element);
+        }
+    </script>
+  
+    <script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity=
+"sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
